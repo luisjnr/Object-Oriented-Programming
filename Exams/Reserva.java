@@ -67,11 +67,11 @@ public class Reserva {
 		return this.diarias;
 	}
 	
-	public String nomeHospede(){
+	public String getNomeHospede(){
 		return this.nomeHospede;			
 	}
 	
-	public boolean incluiRefeicoes(){
+	public boolean getIncluiRefeicoes(){
 		return this.incluiRefeicoes;
 	}
 	
