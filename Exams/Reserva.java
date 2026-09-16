@@ -3,6 +3,20 @@ public class Reserva {
 	private String nomeHospede;
 	private boolean incluiRefeicoes;
 	
+	public Reserva(int codigo, String nomeHospede, int diarias){
+		this.codigo = codigo;
+		this.nomeHospede = nomeHospede;
+		this.diarias = diarias;
+		this.incluiRefeicoes = false;
+	}
+	
+	public Reserva(int codigo, String nomeHospede, int diarias, boolean incluiRefeicoes){
+		this.codigo = codigo;
+		this.nomeHospede = nomeHospede;
+		this.diarias = diarias;
+		this.incluiRefeicoes = true;	
+	}
+	
 	public int getCodigo(){
 		return this.codigo;
 	}
@@ -34,4 +48,5 @@ public class Reserva {
 	public void setIncluiRefeicoes(boolean incluiRefeicoes){
 		this.incluiRefeicoes = incluiRefeicoes;
 	}
+	
 }
