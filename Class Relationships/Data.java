@@ -16,11 +16,28 @@ public class Data{
 	}
 	
 	public String retornaData(){
-		return this.dia + "/" + this.mes + "/" + this.ano + "\n";
+		return this.dia + "/" + this.mes + "/" + this.ano + ".\n";
 	}
 	
 	public String calculaTempo(Data data){
-		return "mais tarde faço!!";
+		int dia = data.getDia() >= this.dia ? (data.getDia() - this.dia) 
+		: (this.dia - data.getDia());
+		
+		int mes = data.getMes() >= this.mes ? (data.getMes() - this.mes) 
+		: (this.mes - data.getMes()); 
+		
+		int ano = data.getAno() >= this.ano ? (data.getAno() - this.ano) 
+		: (this.ano - data.getAno()); 
+		
+		ano = (((ano*12) - mes) / 12);
+		
+		if(data.getAno() != this.ano && mes != 0)
+			mes = 12 - mes;
+		
+		if(ano == 1)
+			ano--;
+		
+		return ano + " ano(s), " + mes + " mes(es), " + dia + " dia(s).\n";
 	}
 	
 	public int getDia(){
