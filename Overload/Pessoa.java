@@ -15,15 +15,19 @@ public class Pessoa{
 	}
 	
 	public String mostraIdade(){ 
-		if(this.mesDeNascimento == 0 || this.anoDeNascimento == 0) 
-			return "Impossível exibir idade, ano ou mês de nascimento sem cadastro.";
+		if(this.anoDeNascimento > 2018)
+			return "Essa pessoa nasceu após a data de referência.";
+		else if(this.anoDeNascimento == 2018)
+			return "0";
 		return Integer.toString(((2018 - this.anoDeNascimento) - 
 		(this.mesDeNascimento < 10 ? 1 : 0)));
 	}
 	
 	public String mostraIdade(int mes, int ano){
-		if(this.mesDeNascimento == 0 || this.anoDeNascimento == 0) 
-			return "Impossível exibir idade, ano ou mês de nascimento sem cadastro.";
+		if(this.anoDeNascimento > 2018)
+			return "Essa pessoa nasceu após a data de referência.";
+		else if(this.anoDeNascimento == 2018)
+			return "0";
 		return Integer.toString(((ano - this.anoDeNascimento) - 
 		(this.mesDeNascimento < mes ? 1 : 0)));
 	}

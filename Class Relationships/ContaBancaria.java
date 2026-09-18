@@ -1,15 +1,15 @@
 public class ContaBancaria{
-	private Pessoa cliente;
+	private Cliente cliente;
 	private int numeroDaConta;
 	private double saldo;
 	
-	public ContaBancaria(Pessoa cliente, int numeroDaConta, double saldo){
+	public ContaBancaria(Cliente cliente, int numeroDaConta, double saldo){
 		this.cliente = cliente;
 		this.numeroDaConta = numeroDaConta;
 		this.saldo = saldo;
 	}
 	
-	public ContaBancaria(Pessoa cliente, int numeroDaConta){
+	public ContaBancaria(Cliente cliente, int numeroDaConta){
 		this.cliente = cliente;
 		this.numeroDaConta = numeroDaConta;
 		this.saldo = 0.0;
@@ -31,7 +31,7 @@ public class ContaBancaria{
 		return false;
 	}
 	
-	public void setCliente(Pessoa cliente){
+	public void setCliente(Cliente cliente){
 		this.cliente = cliente;
 	}
 	
@@ -43,7 +43,7 @@ public class ContaBancaria{
 		this.saldo = saldo;
 	}
 	
-	public Pessoa getCliente(){
+	public Cliente getCliente(){
 		return this.cliente;
 	}
 	

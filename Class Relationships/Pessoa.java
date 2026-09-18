@@ -1,69 +1,54 @@
 public class Pessoa{
 	private String nome;
-	private String cpf;
-	private String endereco;
-	private String telefone;
-	private double renda;
+	private String sexo;
+	private Data nascimento;
 	
-	public Pessoa(String nome, String cpf, String endereco, String telefone, double renda){
+	public Pessoa(String nome){
 		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.renda = 0.0;
+		this.sexo = "Não declarado.";
+		this.nascimento = new Data(1, 1, 2000);
 	}
 	
-	public Pessoa(String nome, String cpf, String endereco, String telefone){
+	public Pessoa(String nome, String sexo, Data nascimento){
 		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.renda = 0.0;
+		this.sexo = sexo;
+		this.nascimento = nascimento;
 	}
 	
-	public String informacoes(){
-		return "Nome: [" + this.nome + "] - Cpf: [" + this.cpf + 
-		"] - Endereço: [" + this.endereco + "] - Telefone: [" +
-		this.telefone + "] - Renda: [R$" + this.renda + "]\n";	
+	public String mostraIdade(Data hoje){
+		if(nascimento.getAno() > hoje.getAno())
+			return "Essa pessoa nasceu após a data de referência.";
+		else if(nascimento.getAno() == hoje.getAno())
+			return "0";
+		int idade = (hoje.getAno() - nascimento.getAno());
+		if(hoje.getMes() < nascimento.getMes())
+			idade--;
+		else if(hoje.getDia() < nascimento.getDia())
+			idade--;
+		return Integer.toString(idade);
 	}
 	
 	public void setNome(String nome){
 		this.nome = nome;
 	}
 	
-	public void setCpf(String cpf){
-		this.cpf = cpf;
-	}
-	
-	public void setEndereco(String endereco){
-		this.endereco = endereco;
-	}
-	
-	public void setTelefone(String telefone){
-		this.telefone = telefone;
-	}
-	
-	public void setRenda(double renda){
-		this.renda = renda;
-	}
-	
 	public String getNome(){
 		return this.nome;
 	}
 	
-	public String getCpf(){
-		return this.cpf;
+	public void setSexo(String sexo){
+		this.sexo = sexo;
 	}
 	
-	public String getEndereco(){
-		return this.endereco;
+	public String getSexo(){
+		return this.sexo;
 	}
 	
-	public String getTelefone(){
-		return this.telefone;
+	public void setNascimento(Data nascimento){
+		this.nascimento = nascimento;
 	}
 	
-	public double getRenda(){
-		return this.renda;
+	public Data getNascimento(){
+		return this.nascimento;
 	}
 }
