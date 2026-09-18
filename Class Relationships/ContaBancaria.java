@@ -15,7 +15,23 @@ public class ContaBancaria{
 		this.saldo = 0.0;
 	}
 	
-	public void setPessoa(Pessoa cliente){
+	public boolean sacar(float saque){
+		if(this.saldo >= saque){
+			this.saldo -= saque;
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean depositar(float deposito){
+		if(deposito > 0){
+			this.saldo += deposito;
+			return true;
+		}
+		return false;
+	}
+	
+	public void setCliente(Pessoa cliente){
 		this.cliente = cliente;
 	}
 	

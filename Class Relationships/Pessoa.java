@@ -35,7 +35,7 @@ public class Pessoa{
 		this.cpf = cpf;
 	}
 	
-	public void set(String endereco){
+	public void setEndereco(String endereco){
 		this.endereco = endereco;
 	}
 	
@@ -63,7 +63,7 @@ public class Pessoa{
 		return this.telefone;
 	}
 	
-	public double renda(){
+	public double getRenda(){
 		return this.renda;
 	}
 }
