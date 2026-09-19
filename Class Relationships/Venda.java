@@ -14,7 +14,7 @@ public class Venda{
 	public String imprimir(){
 		return "Nome: " + this.comprador.getNome() +
 		"\nDescrição do Produto: " + this.produto.getDescricao() +
-		"\nQuantidade: " + this.quantidade + "\nValor Total:" +
+		"\nQuantidade: " + this.quantidade + "\nValor Total: " +
 		(this.produto.getPreco() * this.quantidade) + "\nStatus: " +
 		((this.produto.getPreco() * this.quantidade) <= 
 		this.comprador.getLimiteDeCredito() ? "Aprovada! Compra dentro do limite de crédito."
