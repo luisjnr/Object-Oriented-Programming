@@ -39,4 +39,8 @@ public class Produto{
 	public double getCusto(){
 		return this.custo;
 	}
+	
+	public double getPreco(){
+		return this.preco;
+	}
 }

@@ -46,4 +46,8 @@ public class Consumidor{
 	public double getRenda(){
 		return this.renda;
 	}
+	
+	public double getLimiteDeCredito(){
+		return this.limiteDeCredito;	
+	}
 }
