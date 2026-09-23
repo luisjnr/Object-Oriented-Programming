@@ -35,6 +35,10 @@ public class Empresa{
 			
 		for (int i = 0; i < lista.length; i++)
 			System.out.println(lista[i].listar());
+			
+		System.out.println("Buscar");
+		System.out.println(setor.buscarFuncionario("Carlos").listar());
+		System.out.println(setor.buscarFuncionario(14).listar());
 		
 		
 	}
