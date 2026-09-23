@@ -15,11 +15,14 @@ public class SetorPessoal{
 	}
 	
 	public boolean removerFuncionario(Funcionario funcionario){
-		for(int i = 0; i < this.funcionario.length; i++)
+		for (int i = 0; i < this.funcionario.length; i++){
 			if(this.funcionario[i] == funcionario){
-				this.funcionario[i] = null;
+				Funcionario temp = this.funcionario[i];
+				this.funcionario[i] = this.funcionario[(this.funcionario.length-1)];
+				this.funcionario[(this.funcionario.length-1)] = null;
 				return true;
 			}
+		}
 		return false;
 	}
 	
@@ -38,18 +41,38 @@ public class SetorPessoal{
 	}
 
 	public Funcionario[] listarFuncionarios(int departamento){
-		Funcionario[] lista = new Funcionario[this.funcionario.length];
-		for(int i = 0; i < this.funcionario.length; i++)
-			if(this.funcionario[i].getDepartamento() == departamento)
-				lista[i] = this.funcionario[i];
+		int tamanho = 0;
+		for(int i = 0; i < this.funcionario.length; i++){
+			if(this.funcionario[i] != null)
+				if(this.funcionario[i].getDepartamento() == departamento)
+					tamanho++;
+		}
+		
+		Funcionario[] lista = new Funcionario[tamanho];
+		
+		for(int i = 0; i < this.funcionario.length; i++){
+			if(this.funcionario[i] != null)
+				if(this.funcionario[i].getDepartamento() == departamento)
+					lista[i] = this.funcionario[i];
+		}
 		return lista;
 	}
 	
 	public Funcionario[] listarFuncionarios(String funcao){
-		Funcionario[] lista = new Funcionario[this.funcionario.length];
-		for(int i = 0; i < this.funcionario.length; i++)
-			if(this.funcionario[i].getFuncao().equalsIgnoreCase(funcao))
-				lista[i] = this.funcionario[i];
+		int tamanho = 0;
+		for(int i = 0; i < this.funcionario.length; i++){
+			if(this.funcionario[i] != null)
+				if(this.funcionario[i].getFuncao().equalsIgnoreCase(funcao))
+					tamanho++;
+		}
+		
+		Funcionario[] lista = new Funcionario[tamanho];
+		
+		for(int i = 0; i < this.funcionario.length; i++){
+			if(this.funcionario[i] != null)
+				if(this.funcionario[i].getFuncao().equalsIgnoreCase(funcao))
+					lista[i] = this.funcionario[i];
+		}
 		return lista;
 	}
 	

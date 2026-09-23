@@ -13,8 +13,29 @@ public class Empresa{
 		
 		Funcionario[] lista = setor.listarFuncionarios();
 		
+		System.out.println("\nLista 1");
+		
 		for (int i = 0; i < lista.length; i++){
 			System.out.println(lista[i].listar());
 		}
+		
+		lista = setor.listarFuncionarios(22);
+		
+		System.out.println("Lista 2");		
+
+		for (int i = 0; i < lista.length; i++)
+			System.out.println(lista[i].listar());
+			
+		
+		System.out.println((setor.removerFuncionario(funcionario[0]) ? "Sucesso!\n" : "Falha.\n"));
+		
+		lista = setor.listarFuncionarios("Tech Lead");
+		
+		System.out.println("Lista 3");
+			
+		for (int i = 0; i < lista.length; i++)
+			System.out.println(lista[i].listar());
+		
+		
 	}
 }

@@ -8,7 +8,7 @@ public class Loja {
 		prod[2] = new Produto("Fini", 5.5, 20, "Doces");
 		
 		do{
-			switch (inter.menu("1 - Bala\n2 - Pirulito\n3 - Fini\n4 - Encerrar")){
+			switch (inter.menu(("1 - " + prod[0].getNome() + "\n2 - " + prod[1].getNome() + "\n3 - " + prod[2].getNome() + "\n4 - Encerrar"))){
 				case 1: inter.metodos(prod[0]);
 					
 					break;
