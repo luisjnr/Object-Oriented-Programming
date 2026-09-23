@@ -1,23 +1,23 @@
 public class SetorPessoal{
-	Funcionario[] funcionario;
+	private Funcionario[] funcionario;
 	
 	public SetorPessoal(int tamanho){
 		this.funcionario = new Funcionario[tamanho];
 	}
 	
 	public boolean adicionarFuncionario(Funcionario funcionario){
-		for(Funcionario temp : this.funcionario)
-			if(temp == null){
-				temp = funcionario;
+		for(int i = 0; i < this.funcionario.length; i++)
+			if(this.funcionario[i] == null){
+				this.funcionario[i] = funcionario;
 				return true;
 			}
 		return false;
 	}
 	
 	public boolean removerFuncionario(Funcionario funcionario){
-		for(Funcionario temp : this.funcionario)
-			if(temp == funcionario){
-				temp = null;
+		for(int i = 0; i < this.funcionario.length; i++)
+			if(this.funcionario[i] == funcionario){
+				this.funcionario[i] = null;
 				return true;
 			}
 		return false;
@@ -44,6 +44,7 @@ public class SetorPessoal{
 				lista[i] = this.funcionario[i];
 		return lista;
 	}
+	
 	public Funcionario[] listarFuncionarios(String funcao){
 		Funcionario[] lista = new Funcionario[this.funcionario.length];
 		for(int i = 0; i < this.funcionario.length; i++)

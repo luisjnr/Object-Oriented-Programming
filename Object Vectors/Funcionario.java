@@ -14,6 +14,14 @@ public class Funcionario{
 		this.funcao = funcao;
 	}
 	
+	public String listar(){
+		return "Mátricula: [" + this.matricula +"] - Nome: [" +
+		this.nome + "] - Departamento: [" + this.departamento +
+		"] - Salário: [R$" + this.salario + "] - Função: [" +
+		this.funcao + "]\n";
+			
+	}
+	
 	public void setMatricula(int matricula){
 		this.matricula = matricula;
 	}
