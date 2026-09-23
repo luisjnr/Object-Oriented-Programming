@@ -27,16 +27,20 @@ public class SetorPessoal{
 	}
 	
 	public Funcionario buscarFuncionario(int matricula){
-		for(Funcionario temp : this.funcionario)	
-			if(temp.getMatricula() == matricula)
-				return temp;
+		for(Funcionario temp : this.funcionario){
+			if(temp != null)
+				if(temp.getMatricula() == matricula)
+					return temp;
+		}
 		return null;
 	}
 
 	public Funcionario buscarFuncionario(String nome){
-		for(Funcionario temp : this.funcionario)	
-			if(temp.getNome().equalsIgnoreCase(nome))
-				return temp;
+		for(Funcionario temp : this.funcionario){	
+			if(temp != null)
+				if(temp.getNome().equalsIgnoreCase(nome))
+					return temp;
+			}
 		return null;
 	}
 
