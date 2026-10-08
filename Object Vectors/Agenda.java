@@ -12,8 +12,10 @@ public class Agenda {
 	public boolean adicionaPessoa(Pessoa pessoa){
 		if(pessoa == null)
 			return false;
+		if(buscaContato(pessoa.getNome()) != null)
+			return false;
 		for (int i = 0; i < this.contatos.length; i++)
-			if (this.contatos == null){
+			if (this.contatos[i] == null){
 				this.contatos[i] = pessoa;
 				this.totalContatos++;
 				return true;
@@ -26,15 +28,16 @@ public class Agenda {
 			return false;
 		for (int i = 0; i < this.contatos.length; i++)
 			if (this.contatos[i] == pessoa){
-				this.totalContatos--;
 				for (int j = i; j < (contatos.length-1); j++)
 					contatos[j] = contatos[j+1];
+				contatos[contatos.length - 1] = null;
+				this.totalContatos--;
 				return true;
 			}
 		return false;
 	}
 	
-	public boolean alteraInformacao(Pessoa pessoa){
+	public boolean alteraInformacoes(Pessoa pessoa){
 		if(pessoa == null)
 			return false;
 		for (int i = 0; i < contatos.length; i++){
@@ -47,25 +50,31 @@ public class Agenda {
 		}
 		return false;
 	}
-	
-	public Pessoa[] buscaContato(String nome){
-		if(nome == null)
+		
+	public Pessoa[] buscaPessoas(){
+		if(this.totalContatos == 0)
 			return null;
 		Pessoa[] pessoas = new Pessoa[this.totalContatos];
-		for (int i = 0; i < this.totalContatos; i++){
-			if(contatos[i] == null)
-				continue;
-			if(contatos[i].getNome().equalsIgnoreCase(nome))
-				pessoas[i] = contatos[i];
-		}
+		int i = 0;
+		for (Pessoa pessoa : this.contatos)
+			if(pessoa != null)
+				pessoas[i++] = pessoa;
 		return pessoas;
 	}
 	
-	public Pessoa[] buscaPessoas(){
-		Pessoa[] pessoas = new Pessoa[this.totalContatos];
-		for (int i = 0; i < this.totalContatos; i++)
-			pessoas[i] = contatos[i];
-		return pessoas;
+	public Pessoa buscaContato(String nome){
+		if(nome == null)
+			return null;
+		Pessoa pessoa;
+		for (int i = 0; i < this.totalContatos; i++){
+			if(contatos[i] == null)
+				continue;
+			if(contatos[i].getNome().equalsIgnoreCase(nome)){
+				pessoa = contatos[i];
+				return pessoa;
+			}
+		}
+		return null;
 	}
 	
 	public void setNomeDaAgenda(String nomeDaAgenda){
