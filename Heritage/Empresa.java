@@ -1,16 +1,16 @@
 public class Empresa {
 
 	public static void main(String[] args){
-		Empregado empregado = new Empregado();
+		Empregado empregado = new Empregado("Luis", "Rua Ceara, 645, Centro.",
+		"(38) 99747-6424", 22, 10000.0, 10.0);
+		Fornecedor fornecedor = new Fornecedor("Joao", "Rua Amazonas, 823, Centro.",
+		"(38) 99987-3644", 10000.0, 1000.0);;
 		
-		empregado.setCodigoSetor(22);
-		empregado.setSalarioBase(10000.0);
-		empregado.setImposto(10.0);
-		empregado.setNome("Luis");
-		empregado.setEndereco("Rua Guanabara, 246, Centro.");
-		empregado.setTelefone("(38) 99257-7724");
+		System.out.println("Empregado: " + empregado.getNome() + 
+		", Salário: " + empregado.calculaSalario());
 		
-		System.out.println("Salário: " + empregado.calculaSalario());
+		System.out.println("Fornecedor: " + fornecedor.getNome() +
+		", Saldo: " + fornecedor.obterSaldo());
 	}
 
 }

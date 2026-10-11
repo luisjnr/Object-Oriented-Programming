@@ -3,6 +3,12 @@ public class Pessoa {
 	private String endereco;
 	private String telefone;
 	
+	public Pessoa(String nome, String endereco, String telefone){
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+	}
+	
 	public void setNome(String nome){
 		this.nome = nome;
 	}
