@@ -10,34 +10,60 @@ public class InterfaceBanco {
 		return opc;
 	}
 	
-	public String imput(String frase, String texto){
+	public String imput(String frase){
 		IO.println(frase);
-		texto = scan.nextLine();
+		String texto = scan.nextLine();
 		return texto;
+	}
+	
+	public long imput(String frase, long inteiro){
+		IO.println(frase);
+		inteiro = scan.nextLong();
+		scan.nextLine();
+		return inteiro;
 	}
 	
 	public int imput(String frase, int inteiro){
 		IO.println(frase);
 		inteiro = scan.nextInt();
+		scan.nextLine();
 		return inteiro;
 	}
 	
 	public Double imput(String frase, Double decimal){
 		IO.println(frase);
 		decimal = scan.nextDouble();
+		scan.nextLine();
 		return decimal;
 	}
 	
-	public void metodos(ContaPoupanca conta){
+	public void conta(ContaPoupanca conta){
 		do{
-			switch (menu("")){
-				case 1:
-					
+			switch (menu("1 - Depositar\n2 - Sacar\n3 - Calcular novo saldo\n4 - Cancelar")){
+				case 1: IO.println(conta.depositar(imput("Valor a ser depositado: ", 0.0)));	
 					break;
-				default: IO.println("Digite uma opção válida.");
+				case 2: IO.println(conta.sacar(imput("Valor a ser sacado: ", 0.0)));	
+					break;
+				case 3: IO.println(conta.calcularNovoSaldo(imput("Taxa de rendimento: ", 0.0)));	
+					break;
+				case 4: return;
+				default: IO.println("Digite uma opção válida.\n");
 			}
 			
 		} while (true);
-		
+	}
+	
+	public void conta(ContaEspecial conta){
+		do{
+			switch (menu("1 - Depositar\n2 - Sacar\n3 - Cancelar")){
+				case 1: IO.println(conta.depositar(imput("Valor a ser depositado: ", 0.0)));		
+					break;
+				case 2: IO.println(conta.sacar(imput("Valor a ser depositado: ", 0.0)));		
+					break;
+				case 3: return;
+				default: IO.println("Digite uma opção válida.\n");
+			}
+			
+		} while (true);
 	}
 }

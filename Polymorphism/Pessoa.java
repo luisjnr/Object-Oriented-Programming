@@ -1,10 +1,10 @@
 public class Pessoa {
 	private String nome;
-	private int cpf;
+	private long cpf;
 	private String endereco;
 	private String rg;
 	
-	public Pessoa (String nome, int cpf, String endereco, String rg){
+	public Pessoa (String nome, long cpf, String endereco, String rg){
 		this.nome = nome;
 		this.cpf = cpf;
 		this.endereco = endereco;
@@ -23,7 +23,7 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 	
-	public int getCpf(){
+	public long getCpf(){
 		return this.cpf;
 	}
 	
