@@ -1,34 +1,26 @@
-# Object-Oriented Programming
-
-Repository dedicated to the study and practice of Object-Oriented Programming (OOP) using Java.
-
-It contains exercises and implementations developed throughout the course, covering fundamental object-oriented concepts and Java programming.
 
 ## Content
 
 ### Introductory exercises
-
-Exercises focused on Java fundamentals and basic programming concepts.
+Exercises covering Java fundamentals and basic programming concepts.
 
 ### Classes and objects
-
-Exercises exploring the creation and manipulation of classes and objects in Java.
+Examples of class definitions, object creation, attributes, and methods.
 
 ### Encapsulation
-
-Implementations focused on encapsulation, access modifiers, attributes, methods, and data protection.
+Exercises on encapsulation, access modifiers, and data protection.
 
 ### Builders
+Examples related to object construction and the Builder pattern.
 
-Exercises and implementations related to the Builder pattern and object construction.
+### Overload
+Examples of method overloading in Java.
 
 ### Curso em video
-
-Exercises and examples developed while following the Curso em Vídeo Java classes.
+Exercises and examples developed while following the Curso em Vídeo Java course.
 
 ### Exams
-
-Exercises and implementations developed for exams throughout the course.
+Java source files containing exam-related exercises and solutions.
 
 ## Technologies
 
@@ -38,16 +30,18 @@ Exercises and implementations developed for exams throughout the course.
 
 ## Organization
 
-    Object-Oriented-Programming/
-    ├── Builders/
-    ├── Classes and objects/
-    ├── Curso em video/
-    ├── Encapsulation/
-    ├── Exams/
-    ├── Introductory exercises/
-    ├── Overload/
-    ├── .gitignore
-    └── README.md
+```text
+Object-Oriented-Programming/
+├── Builders/
+├── Classes and objects/
+├── Curso em video/
+├── Encapsulation/
+├── Exams/
+├── Introductory exercises/
+├── Overload/
+├── .gitignore
+└── README.md
+```
 
 ## About
 
