@@ -12,7 +12,7 @@ public class Empregado extends Pessoa {
 	}
 	
 	public Double calculaSalario(){
-		return (salarioBase * ((imposto/100) + 1));
+		return (salarioBase * ((100 - imposto) / 100));
 	}
 	
 	public void setCodigoSetor(int codigoSetor){
