@@ -30,6 +30,10 @@ Exercises and examples developed while following the Curso em Vídeo Java classe
 
 Exercises and implementations developed for exams throughout the course.
 
+### Overload
+
+Exercises exploring method overloading in Java, allowing methods to share the same name with different parameter lists.
+
 ## Technologies
 
 - Java
@@ -38,16 +42,18 @@ Exercises and implementations developed for exams throughout the course.
 
 ## Organization
 
-    Object-Oriented-Programming/
-    ├── Builders/
-    ├── Classes and objects/
-    ├── Curso em video/
-    ├── Encapsulation/
-    ├── Exams/
-    ├── Introductory exercises/
-    ├── Overload/
-    ├── .gitignore
-    └── README.md
+```text
+Object-Oriented-Programming/
+├── Builders/
+├── Classes and objects/
+├── Curso em video/
+├── Encapsulation/
+├── Exams/
+├── Introductory exercises/
+├── Overload/
+├── .gitignore
+└── README.md
+```
 
 ## About
 
