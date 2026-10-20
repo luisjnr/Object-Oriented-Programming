@@ -8,7 +8,7 @@ public class ContaEspecial extends ContaBancaria{
 	
 	@Override
 	public boolean sacar(Double valor){
-		if((this.getSaldo() - valor) >= (this.getLimite() * -1)){
+		if(valor >= (this.getSaldo() + this.limite)){
 			this.setSaldo((this.getSaldo() - valor));
 			return true;
 		}

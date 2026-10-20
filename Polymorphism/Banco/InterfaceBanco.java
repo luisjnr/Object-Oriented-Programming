@@ -15,14 +15,6 @@ public class InterfaceBanco {
 		String texto = scan.nextLine();
 		return texto;
 	}
-	
-	public long imput(String frase, long inteiro){
-		IO.println(frase);
-		inteiro = scan.nextLong();
-		scan.nextLine();
-		return inteiro;
-	}
-	
 	public int imput(String frase, int inteiro){
 		IO.println(frase);
 		inteiro = scan.nextInt();
@@ -71,7 +63,7 @@ public class InterfaceBanco {
 		do{
 			switch (menu(("1 - Acessar conta poupança\n2 - Acessar conta especial\n"
 			+ "3 - Criar conta poupança\n4 - Criar conta especial\n5 - Encerrar"))){
-				case 1: long acesso = imput("Cpf: ", 0L);
+				case 1: long acesso = imput("Cpf: ", 0);
 					int token = 0; 
 						for (int j = 10; j >= 4; j--)
 							token = ((token * 10) + (int)(acesso % j));
@@ -86,7 +78,7 @@ public class InterfaceBanco {
 					if(flag)
 						IO.println("Conta não existe.");
 					break;
-				case 2:	acesso = imput("Cpf: ", 0L);	
+				case 2:	acesso = imput("Cpf: ", 0);	
 					token = 0; 
 						for (int j = 3; j <= 9; j++)
 							token = ((token * 10) + (int)(acesso % j));
@@ -112,7 +104,7 @@ public class InterfaceBanco {
 					flag = true;
 					for (int i = 0; i < contaP.length; i++)
 						if(contaP[i] == null){
-							Pessoa pessoa = new Pessoa(imput("Nome: "), imput("Cpf: ", 0L),
+							Pessoa pessoa = new Pessoa(imput("Nome: "), imput("Cpf: ", 0),
 							imput("Endereço: "), imput("RG: "));
 							for (int j = 0; j < contaP.length; j++)
 								if(contaP[j] != null)
@@ -142,7 +134,7 @@ public class InterfaceBanco {
 				flag = true;
 					for (int i = 0; i < contaE.length; i++)
 						if(contaE[i] == null){
-							Pessoa pessoa = new Pessoa(imput("Nome: "), imput("Cpf: ", 0L),
+							Pessoa pessoa = new Pessoa(imput("Nome: "), imput("Cpf: ", 0),
 							imput("Endereço: "), imput("RG: "));
 							for (int j = 0; j < contaE.length; j++)
 								if(contaE[j] != null)
