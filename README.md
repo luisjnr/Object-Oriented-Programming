@@ -45,12 +45,16 @@ Exercises exploring method overloading in Java, allowing methods to share the sa
 ```text
 Object-Oriented-Programming/
 ├── Builders/
+├── Class Relationships/
 ├── Classes and objects/
 ├── Curso em video/
 ├── Encapsulation/
 ├── Exams/
+├── Heritage/
 ├── Introductory exercises/
+├── Object Vectors/
 ├── Overload/
+├── Polymorphism/
 ├── .gitignore
 └── README.md
 ```
